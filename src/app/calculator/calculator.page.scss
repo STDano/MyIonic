@@ -1,0 +1,44 @@
+ion-grid {
+    max-width: 400px;
+    margin: auto; 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #fff;
+
+
+    ion-input {
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        font-size: 1.5em;
+        padding: 10px;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+      }
+
+    ion-button {
+        width: 100%;
+        height: 100%;
+        font-size: 1.2em;
+        color: white; 
+    }
+
+    .greyButton {
+        --background: #9f9f9f;
+    }
+
+    .orangeButton {
+        --background: #e7953b;
+    }
+
+    .blackButton {
+        --background: #333333;
+    }
+
+    ion-button.double {
+        grid-column: span 2;
+    }
+  }

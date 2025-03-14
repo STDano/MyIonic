@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="page-header">Homepage</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="goToLogin()">Login</ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="homepage-opening">
+    <span class="page-opening">Welcome to MyIonic!</span> <br>
+    <span class="page-subopening">Here we explore basics of Ionic as we learn along the way</span>
+  </div>
+  <div class="pages-nav">
+    <span class="articleOne">The FitnessGram Pacer Test
+      <br> <ion-button (click)="goToArticleOne()">Open Article</ion-button>
+    </span>
+    <br> <ion-button (click)="goToCalculator()">Open Calculator</ion-button>
+  </div>
+</ion-content>

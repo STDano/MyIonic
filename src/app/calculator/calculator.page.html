@@ -1,0 +1,55 @@
+<app-header-comp></app-header-comp>
+
+<div class="ion-page" id="main-content">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <!-- Number Area -->
+    <ion-row>
+      <ion-col><ion-input [value]="display" readonly></ion-input></ion-col>
+    </ion-row>
+    <!-- Reset to Divide -->
+    <ion-row>
+      <ion-col size="3"><ion-button class="greyButton" (click)="clear()">C</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="greyButton" (click)="changeSign()">+/-</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="greyButton" (click)="createPercentage()">%</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="orangeButton" (click)="inputOperator('÷')">÷</ion-button></ion-col>
+    </ion-row>
+    <!-- Seven to Multiply -->
+    <ion-row>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('7')">7</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('8')">8</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('9')">9</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="orangeButton" (click)="inputOperator('×')">×</ion-button></ion-col>
+    </ion-row>
+    <!-- Four to Subtract -->
+    <ion-row>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('4')">4</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('5')">5</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('6')">6</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="orangeButton" (click)="inputOperator('-')">-</ion-button></ion-col>
+    </ion-row>
+    <!-- One to Add -->
+    <ion-row>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('1')">1</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('2')">2</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputNum('3')">3</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="orangeButton" (click)="inputOperator('+')">+</ion-button></ion-col>
+    </ion-row>
+    <!-- Zero to Equals -->
+    <ion-row>
+      <ion-col size="6"><ion-button class="blackButton" (click)="inputNum('0')">0</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="blackButton" (click)="inputDecimal()">.</ion-button></ion-col>
+      <ion-col size="3"><ion-button class="orangeButton" (click)="calculateResult()">=</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+</div>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar
+    [(ngModel)]="searchString"
+    (ionInput)="onSearchList()"
+    show-cancel-button="focus"
+    placeholder="Search a user..."
+  ></ion-searchbar>
+
+  <ion-list *ngIf="searchedUsers.length > 0">
+
+    <ion-item *ngFor="let user of searchedUsers">
+      <ion-label>{{ user.getUsername }}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <div *ngIf="searchedUsers.length === 0" class="no-users">
+    No users found
+  </div>
+
+</ion-content>
